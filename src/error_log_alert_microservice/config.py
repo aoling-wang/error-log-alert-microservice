@@ -2,7 +2,11 @@ import os
 from dataclasses import dataclass
 from dotenv import load_dotenv
 
+# Load test environment variables from a .env file if it exists
+
 load_dotenv()
+
+# Define a dataclass object to hold the configuration settings
 
 @dataclass(frozen=True)
 class Settings:
@@ -11,14 +15,21 @@ class Settings:
 
 
 def load_settings() -> Settings:
-    log_file = os.getenv("LOG_FILE", default="sample_logs/application.log")
-    webhook_url = os.getenv("WEBHOOK_URL", default="https://discord.com/api/webhooks/1545199188638179418/4sH_fD_RpBC0BZPOB_Z6zovxTKCMu2Ul9N4-XFIN7v1UHgFwAGpH7NcSbiNz0CqgDr0h")
+
+    # Insert any additional logic here if needed to import logs from other sources (e.g., databases, cloud storage, etc.)
+
+    log_file = os.getenv("LOG_FILE")
+    webhook_url = os.getenv("WEBHOOK_URL")
+
+    # Validate that the required environment variables are set
 
     if not log_file:
         raise ValueError("LOG_FILE environment variable is required.")
 
     if not webhook_url:
         raise ValueError("WEBHOOK_URL environment variable is required.")
+
+    # Return the settings as a dataclass instance to be processed by main.py
 
     return Settings(
         log_file=log_file,
