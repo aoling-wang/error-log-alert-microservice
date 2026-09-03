@@ -7,7 +7,9 @@ authors = [
     { name = "Kevin Wang", email = "aoling.wang@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "httpx>=0.28.1",
+]
 
 [project.scripts]
 error-log-alert-microservice = "error_log_alert_microservice:main"
@@ -15,3 +17,10 @@ error-log-alert-microservice = "error_log_alert_microservice:main"
 [build-system]
 requires = ["uv_build>=0.12.9,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.5",
+    "ty>=0.0.78",
+]
