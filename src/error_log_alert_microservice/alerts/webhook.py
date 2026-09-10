@@ -10,9 +10,9 @@ class WebhookClient:
     def send_alert(self, event: LogEvent) -> None:
         payload = {
             "content": (
-                f"🚨 {event.level}\n"
-                f"Timestamp: {event.timestamp}\n"
-                f"Message: {event.message}"
+                f"🚨 **{event.level}**\n"
+                f"**Timestamp:** {event.timestamp}\n"
+                f"**Message:** {event.message}"
             )
         }
 
