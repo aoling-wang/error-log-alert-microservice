@@ -2,8 +2,8 @@
 
 This basic log alert microservice studies the use of webhooks to send error alerts from a log source to communication apps like Discord and Slack to notify developments teams and design teams
 
-<img width="485" height="286" alt="image" src="https://github.com/user-attachments/assets/9579c1a6-5bbe-4f52-9cf1-74504310b0a6" />
-<img width="364" height="353" alt="image" src="https://github.com/user-attachments/assets/eab46c6b-060c-44ad-835c-58ff62ae3e61" />
+<img width="485" height="300" alt="image" src="https://github.com/user-attachments/assets/9579c1a6-5bbe-4f52-9cf1-74504310b0a6" />
+<img width="364" height="300" alt="image" src="https://github.com/user-attachments/assets/eab46c6b-060c-44ad-835c-58ff62ae3e61" />
 
 Using basic packages in Python managed and run by uv, this small alert microservice features clear separation of responsibility spread across multiple internal services. This exercise mirrors cloud services like AWS's CloudWatch Logs, SQS, and SNS to alert teams and helps developers and stakeholders to make decisions that affect the trajectory of an application. As an added benefit from the architecture, developers can easily attach this alert module to any application by adding database logic and adding webhook urls as environment variables. As a study of webhooks and architecture, this microservice acts a strong case for modularity and microservice based design choices.
 
