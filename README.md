@@ -40,7 +40,7 @@ Webhook URLs and application configuration are supplied through environment vari
 | **Ruff**          | Linting and formatting                      |
 | **ty**            | Static type checking                        |
 
-## What I Practiced
+## What I Learned
 
 * **Webhook integration** — connecting an application to external communication platforms
 * **Modular architecture** — separating responsibilities into focused components
